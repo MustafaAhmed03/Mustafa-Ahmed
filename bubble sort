@@ -1,0 +1,45 @@
+package assignment3;
+
+import java.lang.reflect.Array;
+
+import support.cse131.ArgsProcessor;
+
+public class BubbleSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ArgsProcessor ap = new ArgsProcessor(args);
+		
+		int arrayLength = ap.nextInt("How many integers?");
+		int [] array = new int[arrayLength];
+		
+		for (int i = 0; i < arrayLength; i++) {
+			int numbers = ap.nextInt("Enter each number");
+			array[i] = numbers;
+			
+			
+		}
+		
+		System.out.print("Given Values: ");
+		for (int i = 0; i < arrayLength; i++) {
+			System.out.print(array[i] + " ");
+		}
+		System.out.println("");
+		System.out.print("Sorted Values: ");
+		
+		for (int i = 0; i < arrayLength; i++) {
+			for (int j = 1; j < arrayLength; j++) {
+				 int stored = array[j - 1];
+				 if (array[j - 1] > array[j]) {
+					 array[j-1] = array[j];
+					 array[j] = stored;
+					 }
+				 }
+			}
+		for (int i = 0; i < arrayLength; i++) {
+			System.out.print(array[i] + " ");
+		}
+	}
+
+}
