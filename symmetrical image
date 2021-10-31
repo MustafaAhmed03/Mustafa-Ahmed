@@ -1,0 +1,42 @@
+package assignment3;
+
+import support.cse131.ArgsProcessor;
+
+public class SymmetricalImage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArgsProcessor ap = new ArgsProcessor(args);
+		int rows = ap.nextInt("How many rows?");
+		int columns = ap.nextInt("How many columns?");
+
+		String[][] array = new String[rows][columns];
+
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < columns; j++) {
+				if (array[i][j] == null) {
+					array[i][j] = " ";
+				}
+
+			}
+		}
+		for (int i1 = 0; i1 < rows * columns / 4; i1++) {
+			int starRow = (int) (Math.random() * rows);
+			int starColumn = (int) (Math.random() * columns);
+			array[starRow][starColumn] = "*";
+			int distance = starColumn - 0;
+			int invertedColumn = columns - 1 - distance;
+			array[starRow][invertedColumn] = "*";
+
+		}
+		for (int i1 = 0; i1 < rows; i1++) {
+			for (int j = 0; j < columns; j++) {
+				System.out.print(array[i1][j]);
+
+			}
+			System.out.println();
+
+		}
+	}
+}
