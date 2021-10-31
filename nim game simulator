@@ -1,0 +1,66 @@
+package assignment2;
+
+import support.cse131.ArgsProcessor;
+
+public class Nim {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ArgsProcessor ap = new ArgsProcessor(args);
+		int initialSticks = ap.nextInt("How many sticks would you like to play with?");
+		System.out.println("Starting Sticks: " + initialSticks);
+		int i = 0;
+		while(initialSticks != 0) {
+			
+			
+			int roundQuestion = ap.nextInt ("How many sticks will you take?");
+			int temp = initialSticks;
+			
+			if(roundQuestion>2) {
+				System.out.println("Can't remove that many! How many sticks will you take?");
+			}
+			else {
+				
+				initialSticks = initialSticks - roundQuestion;	
+				int computerTakes = (int)( Math.random() * 2 + 1);
+
+				if(initialSticks < 0) {
+					initialSticks=temp;
+					roundQuestion = ap.nextInt("Can't remove that many! How many sticks will you take?");
+				}
+				else if(initialSticks == 0) {
+					System.out.println("Round " + i + ": user takes " + roundQuestion + ", " + initialSticks + " sticks remain!");
+					System.out.println("You win!");
+	
+				}
+				else if(initialSticks == 1 && computerTakes==2){
+					System.out.println("Round " + i + ": user takes " + roundQuestion + ", " + initialSticks + " sticks remain!");
+					i++;
+					initialSticks = 0;
+					System.out.println("Round " + i + ": computer takes 1, " + initialSticks + " sticks remina!");
+					System.out.println("You lose!");
+				}
+				else {
+					System.out.println("Round " + i + ": user takes " + roundQuestion + ", " + initialSticks + " sticks remain!");
+					i++;
+					if(initialSticks - computerTakes == 0) {
+						initialSticks -= computerTakes;
+						System.out.println("Round " + i + ": computer takes "+computerTakes+", " + initialSticks + " sticks remain!");
+						System.out.println("Computer wins!");
+					}
+					else {
+						initialSticks -= computerTakes;
+						System.out.println("Round " + i + ": computer takes "+computerTakes+", " + initialSticks + " sticks remain!");
+				}
+			}
+			
+			i++;
+		}
+		}
+				
+
+
+	}
+
+}
