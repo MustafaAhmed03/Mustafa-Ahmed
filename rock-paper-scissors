@@ -1,0 +1,49 @@
+package rockpaperscissors;
+
+import support.cse131.ArgsProcessor;
+
+public class rockpaperscissors {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArgsProcessor ap = new ArgsProcessor(args);
+
+		int numberOfRounds = ap.nextInt("How many rounds of rock-paper-scissors would you like to simulate?");
+		int normalWins = 0;
+		int randomWins = 0;
+		int normalChoice = 0;
+		int randomChoice = 0;
+
+		for (int i = 0; i < numberOfRounds; i++) {
+			randomChoice = (int) (Math.random() * 3);
+			if (normalChoice % 3 == 0 && randomChoice == 1) {
+				System.out.println("Random Player wins!");
+				randomWins++;
+			}
+			if (normalChoice % 3 == 1 && randomChoice == 2) {
+				System.out.println("Random Player Wins!");
+				randomWins++;
+			}
+			if (normalChoice % 3 == 2 && randomChoice == 0) {
+				System.out.println("Random Player Wins!");
+				randomWins++;
+			}
+			if (normalChoice % 3 == 0 && randomChoice == 2) {
+				System.out.println("Normal Player Wins!");
+				normalWins++;
+			}
+			if (normalChoice % 3 == 1 && randomChoice == 0) {
+				System.out.println("Normal Player Wins!");
+				normalWins++;
+			}
+			if (normalChoice % 3 == 2 && randomChoice == 1) {
+				System.out.println("Normal Player Wins!");
+				normalWins++;
+			}
+			normalChoice++;
+		}
+		System.out.println("Normal Player had " + normalWins + " out of " + numberOfRounds);
+		System.out.println("Random Player had " + randomWins + " out of " + numberOfRounds);
+	}
+}
