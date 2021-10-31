@@ -1,0 +1,41 @@
+package exercises.exercises5;
+
+public class StringMethods {
+	
+	public static String dup(String in) {
+		return copies(in, 2);
+	}
+	
+	public static String copies (String s, int n) {
+		String [] array = new String[n];
+		for (int i = 0; i < n; i++) {
+			array[i] = s;
+			
+		}
+		return join (array, " ");
+	}
+	
+	public static String join(String[] array, String joiner) {
+		if (array.length == 0) {
+			return "";
+		}
+		String ans = array[0];
+		for (int i = 1; i < array.length; i++) {
+			ans = ans + joiner + array[i];	
+		}
+		return ans;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(dup("Hello"));
+		for (int i=0; i < 5; i++) {
+			System.out.println(copies("comp sci", i));
+		}
+		String s = "I Like Computer Science";
+		String [] words = s.split(" ");
+		for (String w : words) {
+			System.out.println("A word: " + w);
+		}
+		System.out.println("Back together" + join(words, "<<>>"));
+	}
+}
