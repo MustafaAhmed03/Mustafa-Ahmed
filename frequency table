@@ -1,0 +1,28 @@
+package assignment3;
+
+import support.cse131.ArgsProcessor;
+
+public class FrequencyTable {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArgsProcessor ap = new ArgsProcessor(args);
+		int arrayMax = ap.nextInt("Maximum?");
+		
+		int [] array = new int [arrayMax]; 
+		int integers = ap.nextInt("How many integers would you like to create?");
+		System.out.println("Frequencies for " + integers + " randomly generated values between 1 and " + arrayMax);
+	
+		for (int i = 0; i < integers; i++) {
+			int number = (int)( Math.random() * arrayMax);
+			array[number] = array[number] + 1;
+
+
+		}
+		for (int i = 0; i < arrayMax; i++) {
+			System.out.println((i+1) + ": " + array[i]);
+			
+		}
+}
+}
