@@ -1,0 +1,51 @@
+package pascal;
+
+import support.cse131.ArgsProcessor;
+
+public class PascalsTriangle {
+	public static void main(String[] args) {
+
+		ArgsProcessor ap = new ArgsProcessor(args);
+
+		int N = ap.nextInt("How many rows?");
+		int rows = N;
+		int columns = N;
+		int[][] array = new int[rows][columns];
+
+		System.out.println("\t" + "column");
+
+		System.out.print("        ");
+
+		for (int i = 0; i < columns; i++) {
+			System.out.print(i + "  ");
+		}
+		System.out.println();
+		System.out.println("row");
+		for (int r = 0; r < rows; r++) {
+			for (int c = 0; c < columns; c++) {
+				if (c == 0) {
+					array[r][c] = 1;
+				}
+				if (c == r) {
+					array[r][c] = 1;
+				}
+				if (r < 0 || c < 0 || c > r) {
+					array[r][c] = 0;
+				}
+				if (c != r && c != 0 && c < r && r > 0 && c > 0) {
+					array[r][c] = array[r - 1][c] + array[r - 1][c - 1];
+				}
+			}
+		}
+			for (int j = 0; j < rows; j++) {
+				System.out.print(j + "\t");
+				for (int b = 0; b < columns; b++) {
+					if (array[j][b] != 0) {
+						System.out.print(array[j][b] + "  ");
+					}
+					
+				}
+				System.out.println();
+			}
+	}
+}
