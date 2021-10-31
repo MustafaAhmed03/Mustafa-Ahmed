@@ -1,0 +1,85 @@
+package sortanalysis;
+
+import support.cse131.ArgsProcessor;
+
+public class DataSortingAndAnalysis {
+	public static void main(String[] args) {
+			
+			ArgsProcessor ap = new ArgsProcessor(args);
+			
+			int arrayLength = ap.nextInt("How many integers?");
+			int [] array = new int[arrayLength];			
+			
+			for (int i = 0; i < arrayLength; i++) {
+				int numbers = ap.nextInt("Enter each number");
+				array[i] = numbers;
+				
+			}
+			
+			System.out.print("Input: ");
+			for (int i = 0; i < arrayLength; i++) {
+				System.out.print(array[i] + " ");
+			}
+			System.out.println("");
+			System.out.print("Sorted: ");
+			
+			
+			if (arrayLength == 1) {
+			}
+			else {	
+				for (int i = 0; i < arrayLength; i++) {
+					for (int j = 1; j < arrayLength; j++) {
+						int stored = array[j - 1];
+						if (array[j - 1] > array[j]) {
+							array[j-1] = array[j];
+							array[j] = stored;
+						 }
+					 }
+				}
+			}
+			for (int i = 0; i < arrayLength; i++) {
+				System.out.print(array[i] + " ");
+			}
+			System.out.println("");
+			
+			double mean;
+			double temp = 0;
+			double median;
+			int min;
+			int max; 
+			int range;
+			for (int i = 0; i < arrayLength; i++) {
+				temp += array[i];
+			}
+			mean = temp/arrayLength;
+			max = array[arrayLength-1];
+			min = array[0];
+			range = max-min;
+			
+			if (arrayLength == 1) {
+				median = array[0];
+				System.out.println("Mean: " + array[0]);
+				System.out.println("Median: " + median);
+				System.out.println("Min: " + array[0]);
+				System.out.println("Max: " + array[0]);
+				System.out.println("Range: " + 0);
+			}
+			else {
+				double medianRight = array[(arrayLength/2)-1];
+				double medianLeft = array[arrayLength/2];
+				if(arrayLength%2 == 0) {
+					median = (medianRight + medianLeft) / 2;
+				}
+				else {
+					median = array[(arrayLength/2)];
+				}
+			
+			System.out.println("Mean: " + mean);
+			System.out.println("Median: " + median);
+			System.out.println("Min: " + array[0]);
+			System.out.println("Max: " + array[arrayLength-1]);
+			System.out.println("Range: " + range);
+
+			}
+		}
+	}
