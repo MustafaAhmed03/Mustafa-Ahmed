@@ -1,0 +1,54 @@
+package assignment4;
+
+import java.awt.Color;
+
+import edu.princeton.cs.introcs.StdDraw;
+import support.cse131.ArgsProcessor;
+import zombies.ZombieSimulationFiles;
+
+public class ZombieData {
+
+	public static void main(String[] args) throws Exception {
+		// NOTE: The line below will prompt the user with a file open dialog box.
+		//       The contents of the selected file will be made available via the ArgsProcessor ap.
+		ArgsProcessor ap = ZombieSimulationFiles.createArgsProcessorFromFile(args);
+
+		// TODO: 1. Read in the number of entities from the ArgsProcessor
+
+		int entities = ap.nextInt();
+		
+		// TODO: 2. Create the arrays that will hold entity data
+
+		String[] areZombies = new String [entities];
+		Double[] xs = new Double [entities];
+		Double[] ys = new Double [entities];
+		
+		// TODO: 3. Read in all the Entity data
+
+		int nonZombie = 0;
+		
+		for (int i = 0; i < entities; i++) {
+			areZombies[i] = ap.nextString();
+			xs[i] = ap.nextDouble();
+			ys[i] = ap.nextDouble();
+		if ("Nonzombie".equals(areZombies[i])) {
+			nonZombie++;
+			}
+		}
+		StdDraw.text(0.095, 0.015, nonZombie + "/" + entities);
+		
+		// TODO: 4. Iterate through all the data and display it using StdDraw	
+		
+		for (int i = 0; i < entities; i++) {
+			if ("Nonzombie".equals(areZombies[i])) {
+				StdDraw.setPenColor(Color.black);
+				StdDraw.filledCircle(xs[i], ys[i], 0.008);
+			}
+			else {
+				StdDraw.setPenColor(Color.red);
+				StdDraw.filledCircle(xs[i], ys[i], 0.008);
+			}
+			StdDraw.show(1);
+		}
+	}
+}
