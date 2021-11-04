@@ -1,0 +1,142 @@
+package assignment6;
+
+public class RecursiveMethods {
+
+	/**
+	 * Recursively computes base ^ exponent
+	 * 
+	 * @param base the base - can be positive or negative
+	 * @param exp  the exponent - can be positive or negative
+	 * @return base ^ exponent
+	 */
+	/**
+	 */
+	public static double exponent(int base, int exp) {
+		
+			if (exp == 0) {
+				return 1;
+			}
+			else if (exp > 0){
+				return base * exponent(base, exp - 1);
+			}
+			else
+				return 1.0 / base * exponent(base, exp + 1);
+		}
+
+
+
+	/**
+	 * Recursively compute the sum of elements in an array
+	 * 
+	 * @param array an array of integers
+	 * @return the sum of the elements in values
+	 */
+	public static int arraySum(int[] array) {
+		
+		return helperMethod(array, array.length - 1);
+		
+	}
+	/**
+	 * 	
+	 * @param array
+	 * @param index
+	 * @return
+	 */
+	public static int helperMethod(int[] array, int index) {
+		
+		if (index < 0) {
+			return 0;
+		}
+		else {
+			return array[index] + helperMethod(array, index-1);
+		}
+	}
+
+	/**
+	 * Return a new String which is the original source String with all occurrences
+	 * of the target character substituted by the replacement String.
+	 * 
+	 * @param source      the source String
+	 * @param target      the target character to be replaced
+	 * @param replacement the replacement String
+	 * 
+	 * @return the String which results from substituting all of the target
+	 *         characters in the source String with the replacement String
+	 */
+	public static String substituteAll(String source, char target1, char target2, String replacement1, String replacement2) {
+		String result = "";
+		for (int i = 0; i < source.length(); ++i) {
+			char ch = source.charAt(i);
+			if (ch == target1) {
+				result = result + replacement1;
+			} else if (ch == target2) {
+				result = result + replacement2;
+			}
+			else {
+				result = result + ch;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * Recursively computes string representations of dragon curves
+	 * 
+	 * @param n the desired degree of the dragon curve
+	 * @return the nth dragon curve
+	 */
+	public static String dragon(int n) {
+		
+		String base = "F-H";
+		
+		if(n == 0) {
+			return base;
+		} 
+		else {
+			return substituteAll(dragon(n-1),'F', 'H', "F-H", "F+H");
+		}
+	}
+
+
+
+	/**
+	 * Finds the length of the longest path in the given 2D array from the specified
+	 * start position.
+	 * 
+	 * @param chart 2D array of stones
+	 * @param r     start position row
+	 * @param c     start position column
+	 * @return the length of the longest path that was found
+	 */
+	
+	//1,2,8.5
+	
+	
+	
+	public static int maxPathLength(boolean[][] chart, int r, int c) {
+		
+		if(chart.length <= r || chart[0].length <= c || r < 0 || c < 0) {
+			return 0;
+		}
+		else if (!chart[r][c]) { 
+			return 0;
+		}
+		else {
+			
+			chart[r][c] = false;
+			
+			int up = maxPathLength(chart, r, c + 1);
+			int down = maxPathLength(chart, r, c-1);
+			int right = maxPathLength(chart, r+1,c);
+			int left = maxPathLength(chart, r-1,c);
+			int maxDistance = 0;
+			
+			chart[r][c] = true;
+		
+		maxDistance = Math.max(up, Math.max(down, Math.max(left, right)));
+		
+			return maxDistance + 1;
+	}
+}
+}
+
