@@ -1,0 +1,208 @@
+package assignment7;
+
+public class Student {
+	
+private String firstName;
+private String lastName;
+private int StudentId;
+private double BearBucksBalance;
+private int TotalAttemptedCredits;
+private int TotalPassingCredits;
+private double QualityPoints;
+
+/**
+ * method student is a constructor
+ */
+public Student() {
+	firstName = "";
+	lastName = "";
+	StudentId = 0;
+	TotalAttemptedCredits = 0;
+	TotalPassingCredits = 0;
+	QualityPoints = 0;
+	BearBucksBalance = 0;
+}
+/**
+ * method student is a constructor
+ * @param FirstName
+ * @param LastName
+ * @param StudentID
+ */
+public Student(String FirstName, String LastName, int StudentID) {
+	firstName = FirstName;
+	lastName = LastName;
+	StudentId = StudentID;
+	BearBucksBalance = 0;
+	TotalAttemptedCredits = 0;
+	TotalPassingCredits = 0;
+	QualityPoints = 0;
+}
+/**
+ * method getFullName gets the full name of the student
+ * @return first name and last name
+ */
+public String getFullName() {
+	return this.firstName + " " + this.lastName;
+}
+/**
+ * method getLastname gets the last name of the student; useful for creating legacy later on
+ * @return last name
+ */
+public String getlastname() {
+	return this.lastName;
+}
+/**
+ * method getID gets the ID of the student
+ * @return student ID
+ */
+public int getId() {
+	return this.StudentId;
+}
+/**
+ * method getbearBucksBalance gets the bear bucks balance of the student
+ * @return bear bucks balance
+ */
+public double getBearBucksBalance() {
+	return BearBucksBalance;
+}
+/**
+ * method cashOutBearBucks cashes out available balance, sets balance to 0 if withdrawing less than 10, otherwise charges 10 dollar withdrawal fee
+ * @return bear bucks balance
+ */
+public double cashOutBearBucks() {
+	if (BearBucksBalance > 10.0) {
+		double temp = BearBucksBalance-10;
+		BearBucksBalance = 0;
+		return temp;
+	}
+	else {
+		BearBucksBalance = 0;
+		return BearBucksBalance;
+	}
+}
+/**
+ * method deposit bear bucks deposits bear bucks into the account
+ * @param amount
+ * @return bear bucks balance
+ */
+public void depositBearBucks(double amount) {
+	BearBucksBalance += amount;
+}
+/**
+ * method deduct bear bucks deducts/withdraws bear bucks from the account
+ * @param amount
+ * @return bear bucks balance
+ */
+public void deductBearBucks(double amount) {
+	BearBucksBalance -= amount;
+}
+/**
+ * method submitGrade submits the grade which has a value of 0-4, anything less than 1.7 is failing, also determines if you get credit
+ * @param grade
+ * @param credits
+ * @return quality points which is grade multiplied by credits
+ */
+public void submitGrade(double grade, int credits) {
+	if (grade >= 1.7) {
+		TotalPassingCredits += credits;
+		TotalAttemptedCredits += credits;
+	}
+	else {
+		TotalAttemptedCredits += credits;
+	}
+	QualityPoints += grade * credits;
+	
+}
+/**
+ * method get total attempted credits gets all credits for all classes taken
+ * @return all credits
+ */
+public int getTotalAttemptedCredits() {
+	return TotalAttemptedCredits;
+}
+/**
+ * method gets all passing credits which are credits for classes where the grade was greater than 1.7
+ * @return all passing credits
+ */
+public int getTotalPassingCredits() {
+	return TotalPassingCredits;
+}
+/**
+ * method calculate grade point average calculates the student's GPA
+ * @return quality points divided by total attempted credits which is GPA
+ */
+public double calculateGradePointAverage() {
+	return QualityPoints / TotalAttemptedCredits;
+}
+/**
+ * method getClassStanding gets the rank of the student in their class
+ * @return the grade level of the student
+ */
+public String getClassStanding() {
+	if (TotalPassingCredits < 30) {
+		return "First Year";
+	}
+	else if (TotalPassingCredits >= 30 && TotalPassingCredits < 60) {
+		return "Sophomore";
+	}
+	else if (TotalPassingCredits >= 60 && TotalPassingCredits < 90) {
+		return "Junior";
+	}
+	else {
+		return "Senior";
+	}
+}
+/**
+ * method checks availability for the fraternity
+ * @return true or false depending on GPA and passing credits
+ */
+public Boolean isEligibleForPhiBetaKappa() {
+	if (TotalPassingCredits >= 98 && this.calculateGradePointAverage() >= 3.60 || TotalPassingCredits >= 75 && this.calculateGradePointAverage() >= 3.80) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+/**
+ * createLegacy creates a legacy student that has a firstname, a hyphenated or not lastname, bearbucks balance, and id
+ * @param firstname
+ * @param other
+ * @param isHyphenated
+ * @param id
+ * @return student
+ */
+public Student createLegacy(String firstname, Student other, boolean isHyphenated, int id) {
+	String lastname = "";
+	if (isHyphenated == true) {
+		lastname = this.getlastname() + "-" + other.getlastname();
+	}
+	else {
+		lastname = this.getlastname();
+	}
+	Student Goku = new Student(firstname, lastname, id);
+	Goku.depositBearBucks(this.cashOutBearBucks() + other.cashOutBearBucks());
+	return Goku;
+}
+/**
+ * @method creates a string with first name, last name, and ID
+ * @param none
+ * @return first name, last name, and studentID
+ */
+public String toString() {
+	return this.firstName + " " + this.lastName + this.StudentId;
+}
+
+
+
+
+
+
+
+
+
+
+}
+
+
