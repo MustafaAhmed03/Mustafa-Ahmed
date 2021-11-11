@@ -1,0 +1,149 @@
+package assignment7;
+
+import java.util.Arrays;
+
+public class Course {
+	
+private String Name;
+private int Credits;
+private int Capacity;
+private Student[] Roster;
+
+/**
+ * method student is a constructor
+ */
+public Course() {
+	Name = "";
+	Credits = 0;
+	Capacity = 0;
+}
+/**
+ * method student is a constructor
+ * @param Name
+ * @param Credits
+ * @param Capacity
+ */
+public Course(String Name, int Credits, int Capacity) {
+	this.Name = Name;
+	this.Credits = Credits;
+	this.Capacity = Capacity;
+	this.Roster = new Student[this.Capacity];
+}
+/**
+ * getName gets the name of the student
+ * @return name of the student
+ */
+public String getName() {
+	return this.Name;
+}
+/**
+ * getCredits gets the credits of the student
+ * @return credits of the student
+ */
+public int getCredits() {
+	return this.Credits;
+}
+/**
+ * getCapacity gets the capacity of the class
+ * @return the capacity of the class
+ */
+public int getCapacity() {
+	return this.Capacity;
+}
+/**
+ * getRoster gets the Roster of the class
+ * @return the students in the class
+ */
+public int getRoster() {
+	return 0;
+}
+/**
+ * addStudent adds students to the Roster
+ * @param s
+ * @return the new Roster with the added students
+ */
+public boolean addStudent(Student s) {
+	if (this.getSeatsRemaining() == 0) {
+		return false;
+	}
+	else {
+	for (int i = 0; i < this.Roster.length; i++) {
+		if (this.Roster[i] == s) {
+			return false;
+		}
+		else {
+			
+		}
+		if (this.Roster[i] == null && this.Roster[i] != s) {
+			this.Roster[i] = s;
+			break;
+		}
+		else {
+			
+		}
+	}
+	return true;
+	}
+}
+/**
+ * getStudentAt(int i) gets a student at a specific filled position
+ * @param i
+ * @return the student at a particular seat
+ */
+public Student getStudentAt(int i) {
+	return Roster[i];
+}
+/**
+ * method generateRoster generates the roster of students by incrementing students if there is a student at position i
+ * @return the roster of students (string of names)
+ */
+public String generateRoster() {
+	String Roster = "";
+	for (int i = 0; i < this.Roster.length; i++) {
+		if (this.Roster[i] != null) {
+			Roster += this.getStudentAt(i).toString();
+		}
+	}
+	return Roster;
+}
+/**
+ * calculateAverageGPA calculates the average GPA of all students in the roster
+ * @return the averageGPA of students by taking total GPA and dividing it by total students
+ */
+public double calculateAverageGPA() {
+	double GPA = 0;
+	for (int i = 0; i < this.Roster.length; i++) {
+		if (this.Roster[i] != null) {
+			GPA += this.getStudentAt(i).calculateGradePointAverage();
+		}
+	}	
+	return GPA / (this.Capacity - this.getSeatsRemaining());
+}
+/**
+ * getSeatsRemaining calculates the number of seats remaining in the roster
+ * @return the number of seats in the roster
+ */
+public int getSeatsRemaining() {
+	int Seats = 0;
+	for (int index = 0; index < this.Roster.length; index++) {
+		if (Roster[index] == null) {
+			Seats++;
+		}
+	}
+	return Seats;
+}
+
+/**
+ * method toString compiles the name and credits of the students
+ */
+public String toString() {
+	return "Course [Name=" + Name + ", Credits=" + Credits + ", getName()=" + getName() + ", getCredits()="
+			+ getCredits() + "]";
+}
+
+
+
+
+	
+	
+}
