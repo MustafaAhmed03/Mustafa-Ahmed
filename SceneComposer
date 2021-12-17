@@ -1,0 +1,133 @@
+package assignment9;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+
+import assignment9.scenes.Bubbles;
+import assignment9.scenes.Clear;
+import assignment9.scenes.Forest;
+import assignment9.scenes.Leaves;
+import assignment9.scenes.Sequence;
+import assignment9.scenes.ifs.Dragon;
+import assignment9.scenes.ifs.Tree;
+import edu.princeton.cs.introcs.StdDraw;
+import support.cse131.ArgsProcessor;
+
+public class SceneComposer {
+
+
+
+	public static void main(String[] args) {
+		
+		// Note: Double Buffering is enabled!  
+		// You'll need to call show() to update the screen.
+		// In most cases you'll want to call show() after you've drawn something
+		
+		//notes:
+		//make it so that the Strings d0 invoke an integer value, and that integer invokes the program to draw that object
+		//can this be done from string to object directly?
+		//create an initial scene stored in variable init
+		
+		//if "record".equals Record
+		//how to start recording
+		
+		//initial scene linkedlist
+		//storing the recording
+		
+		//take list, convert into sequence
+		//sequence."name" = new sequence(pass in list in parentheses)
+		//set boolean for recording = false
+		//when recording starts set equal to draw
+		//when calling draw, check if recording and add to the list as well as drawing it out
+
+		
+	//crucial stuff	
+		ArgsProcessor ap = new ArgsProcessor(args);
+		StdDraw.enableDoubleBuffering();
+		Map<String, Drawable> Design = new HashMap<>();
+		LinkedList<Drawable> init = new LinkedList<Drawable>();
+		LinkedList<Drawable> user = new LinkedList<Drawable>();
+		String Draw = " ";
+		boolean recording = false;
+		
+	//initializing object for the things I want to draw
+		Forest forest = new Forest(500);
+		Leaves leaf = new Leaves(500);
+		Bubbles bubbles = new Bubbles(50);
+		Dragon dragon = new Dragon(0.4, 0, 1);
+		Tree tree = new Tree(0.3, 0, 1);
+		
+		Forest forest2 = new Forest(50);
+		Leaves leaf2 = new Leaves(50);
+		Clear clear = new Clear();
+	
+	//putting the objects in my map
+		Design.put("f", forest);
+		Design.put("b", bubbles);
+		Design.put("l", leaf);
+		Design.put("d", dragon);
+		Design.put("t", tree);
+		Design.put("clear", clear);
+		
+	//putting the objects in my initial scene
+		init.add(forest);
+		init.add(leaf);
+		
+	//showing the initial scene
+		Sequence initial = new Sequence(init);
+		Design.put("init", initial);
+		initial.draw();
+		StdDraw.show();
+
+		while(Design != null) {		
+			
+			
+			Draw = ap.nextString("What would you like to do?");		
+			
+			
+			if(Design.get(Draw) != null) {
+				Design.get(Draw).draw();
+				StdDraw.show();
+			}
+			else if (Draw.equals("end")) {
+				break;
+			}
+			else {
+				System.out.println("Commands");
+				System.out.println("----------------");
+				
+				for(String key : Design.keySet()) {
+					System.out.println(key);
+				}
+			}
+			
+			
+			if(Draw.equals("recordon")) {
+				
+				user.clear();
+				
+				recording = true;	
+					
+				while(recording == true) {
+					
+						Draw = ap.nextString("Recording. (typing recordoff stops the recording)");
+				
+						if(Design.get(Draw) != null) {
+							Design.get(Draw).draw();
+							user.add(Design.get(Draw));
+							StdDraw.show();
+						}					
+							
+						if(Draw.equals("recordoff")) {
+							recording = false;
+							Sequence users = new Sequence(user);
+							Design.put(ap.nextString("What would you like the name of your drawing to be?"), users);
+							users.draw();
+							StdDraw.show();
+					}
+				}
+			}	
+		}
+	}
+}
