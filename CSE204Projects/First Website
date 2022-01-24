@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSE 204 - Assignment 01 Hello World</title>
+
+    </head>
+    <body bgcolor="blue">   
+        <h1 style="text-align: center;">Hello world!</h1>
+        <p>
+            <strong>My name is:</strong>
+            Mustafa Ahmed
+        </p>
+        <p>
+            <strong>My email address is:</strong>
+            a.mustafa@wustl.edu
+        </p>
+        <p>
+            <strong>I am taking this class because:</strong>
+            I am interested in web development and front-end frameworks. So far, I have been exposed to back end, but I am intrigued by the different languages and libraries that will be used in this class.
+        </p>
+        <p><strong>
+            Here is a picture of a diamond:
+        </strong>
+    </p>
+    <img src="https://cdn.britannica.com/28/8028-004-8469CD5B/Diamond.jpg" alt="Diamond">
+    </body>
+</html>
