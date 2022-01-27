@@ -1,0 +1,58 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta charset="uft-8">
+        <title> CSE 204 - Assignment 02 Personal Bio</title>
+    </head>
+<h1 style="text-align: center; color:white">MUSTAFA AHMED</h1>
+<body bgcolor="black">
+<p style="color:white">
+    <h2 style="color:white">About me:</h2>
+    <ul style="color:white">
+    My name is <strong>Mustafa Ahmed</strong> and I am an aspiring software engineer. From a young age, I’ve always been fascinated with how technology interacts with our world. I’ve always loved asking questions and I’m obsessed with acquiring new knowledge. 
+    I am currently looking for my first professional experience; hoping to translate curiosity into algorithms, programs, and projects that help me further understand our world.
+    </ul>
+</p>
+
+<hr>
+
+<p style="color:white">
+    <h2 style="color:white">My Goals:</h2>
+    <ul style="color:white">
+    Right now, I am hoping to strengthen my knowledge of web development. Learning <abbr title="Hyper Text Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, and Javascript, I hope to learn more about the intricacies of web development.
+    Additionally, I am improving my understanding of data structures and algorithms along with Java to perform better in coding interviews.
+    Lastly, I am working on building an app using the Flutter framework as a fun side project.
+    </ul>   
+</p>
+
+<hr>
+
+<p>
+    <h3 style="color:white">Contact Information:</h3>
+    <ul style="color:white">
+    <ul>
+    <em style="color:white">
+        Email:
+    </em> 
+    a.mustafa@wustl.edu
+    </ul>
+    <ul>
+    <em style="color:white">
+        LinkedIn:
+    </em>
+    <a href="url">https://www.linkedin.com/in/mustafa-ahmed-b40a42217/</a>
+    </ul>  
+    <ul>
+    <em style="color:white">
+        Phone Number:  
+    </em>
+    713.515.9834
+    </ul>
+</p>
+</ul>
+</body>
+</html>
+
+Website URL: https://wustlcse204.github.io/02-personal-biography-MustafaAhmed03-2/
+
+
