@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="description" content="Instagram Clone">
+      <meta name="keywords" content="Instagram, Clone">
+      <meta name="author" content="Mustafa Ahmed">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> CSE 204 - Assignment 05 Instagram Clone</title>
+      <script src="https://kit.fontawesome.com/c2fbf42676.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="style.css">
+    </head>
+
+
+  <nav class="navbar">
+    <div class="nav-format">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcLSbzoA0Jc4YoFyZDV3vFsmngsHhyK7WC9NfQ2MnedpKuW3GC" class="instagram-logo" alt="">
+      <div class="slash"></div>
+      <img src="data:image/png;base64,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" class="magnifying-glass" alt="">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/640px-Instagram_logo.svg.png" class="instagram-title" alt="">
+      <input type="text" class="search-bar" placeholder="Search">
+        <div class="navbar-elements">
+            <img src="https://cdn2.iconfinder.com/data/icons/freecns-cumulus/32/519779-90_Compass-512.png" class="icon" alt="">
+            <svg aria-label="Activity Feed" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+            <!--heart image taken from instagram's website-->
+            <img src="https://cdn3.iconfinder.com/data/icons/basic-user-interface-application/32/INSTAGRAM_ICON_SETS-12-512.png" class="icon" alt="">
+        </div>
+    </div>
+  </nav>
+
+
+<!--nav class for the navigation bar, div class for the formatting of the navbar, div class for the elements in the navbar
+(explore, like, profile), like img taken from instagram because it was the highest quality I found-->
+
+<section class="main">
+  <div class="wrapper">
+    <div class="left-column">
+      <div class="post">
+          <div class="info">
+              <div class="user">
+                  <div class="profile-pic"> 
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa_j4wnUWwwrAuTp3R5SniOKSYmncieS2mag&usqp=CAU" class="pfp" alt=""></div>
+                  <p class="username">mustafa's post</p>
+              </div>
+          </div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQthHVYX7uaGAQbJifvkv4GskIjvp14b9KIAQ&usqp=CAU" class="post-image" alt="">
+          <div class="post-content">
+              <div class="reaction-wrapper">
+                <svg aria-label="Activity Feed" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_qbemKS_LoKVR256hSo8vnckvbUrZV_2G5w&usqp=CAU" class="comment-icon" alt="">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB2PleQV5UAHnd_i-YkEfvUJyiNip3PXVjia-tdauZBKlRQ-p_vw" class="share icon" alt="">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcjVpKnTI5D_ywO9ZGTtZONnfgqPK6RB2BgqC243RfGusP-c_c" class="save icon" alt="">
+              </div>
+              <p class="likes">4040404 likes</p>
+              <p class="description"> <strong>mustafa</strong> im that guy</p>
+              <p class="post-time">200 minutes ago</p>
+          </div>
+          <div class="comment-wrapper">
+              <input type="text" class="comment-box" placeholder="Add a comment...">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAiWyk5_fBAeXNyI9hc5utgqUR3IDuemwMbg&usqp=CAU" class="options" alt="">
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="main">
+  <div class="wrapper">
+    <div class="left-column">
+      <div class="post">
+          <div class="info">
+              <div class="user">
+                  <div class="profile-pic"> 
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa_j4wnUWwwrAuTp3R5SniOKSYmncieS2mag&usqp=CAU" class="pfp" alt=""></div>
+                  <p class="username">mustafa's post</p>
+              </div>
+          </div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRZjX269STPdAZDPGF1ln0jCWwVYPXGYB6Ow&usqp=CAU" class="post-image" alt="">
+          <div class="post-content">
+              <div class="reaction-wrapper">
+                <svg aria-label="Activity Feed" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_qbemKS_LoKVR256hSo8vnckvbUrZV_2G5w&usqp=CAU" class="comment-icon" alt="">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB2PleQV5UAHnd_i-YkEfvUJyiNip3PXVjia-tdauZBKlRQ-p_vw" class="share icon" alt="">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcjVpKnTI5D_ywO9ZGTtZONnfgqPK6RB2BgqC243RfGusP-c_c" class="save icon" alt="">
+              </div>
+              <p class="likes">1 like</p>
+              <p class="description"> <strong>mustafa</strong> im also that guy</p>
+              <p class="post-time">5000 minutes ago</p>
+          </div>
+          <div class="comment-wrapper">
+              <input type="text" class="comment-box" placeholder="Add a comment...">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAiWyk5_fBAeXNyI9hc5utgqUR3IDuemwMbg&usqp=CAU" class="options" alt="">
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="main">
+  <div class="wrapper">
+    <div class="left-column">
+      <div class="suggestions-for-you"><strong>Suggestions For You</strong></div>
+      <div class="see-all"><strong>See All</strong></div>
+      <div class="suggestions">
+
+          <div class="info">
+          </div>
+          <div class="post-content">
+              <div class="reaction-wrapper">
+                <div class="box">
+                  <button class="button">Follow</button>
+                  <p class="account-name"><strong>Obama</strong></p>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa_j4wnUWwwrAuTp3R5SniOKSYmncieS2mag&usqp=CAU" height="70" width="70" class="userpfp" alt="">
+                </div>
+
+                <div class="box2">
+                  <button class="button2">Follow</button>
+                  <p class="account-name2"><strong>Drake</strong></p>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa_j4wnUWwwrAuTp3R5SniOKSYmncieS2mag&usqp=CAU" height="70" width="70" class="userpfp2" alt="">
+                </div>
+
+                <div class="box3">
+                  <button class="button3">Follow</button>
+                  <p class="account-name3"><strong>Kanye</strong></p>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa_j4wnUWwwrAuTp3R5SniOKSYmncieS2mag&usqp=CAU" height="70" width="70" class="userpfp3" alt="">
+                </div>
+              </div>
+          </div>
+          <div class="suggestion-wrapper">
+
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<div class="right-column">
+  <div class="profile-of-user"></div>
+</div>
+
+<div class="row">
+
+  <!-- user image-->
+    <div class="bubble">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Circle_-_black_simple.svg/500px-Circle_-_black_simple.svg.png" width="60" height="60" alt="">
+    </div>
+  </div>
+
+  <!--user info-->
+    <div class="user--name"> <strong>thatGuyMustafa</strong> </div>
+    <div class="display-name"> mustafa </div>
+
+  <!--stories-->
+  <div class="story-header"><strong>Stories</strong></div>
+  <div class="watch-all"><strong>Watch All</strong></div>
+
+
+
+    <div class="story">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Circle_-_black_simple.svg/500px-Circle_-_black_simple.svg.png" width="60" height="60" alt="">
+    </div>
+
+      <div class="story-text"><strong>user1</strong></div>
+      <div class="story-text2"><strong>2HoursAgo</strong></div>
+  
+      <div class="story2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Circle_-_black_simple.svg/500px-Circle_-_black_simple.svg.png" width="60" height="60" alt="">
+      </div>
+
+      <div class="story-text3"><strong>user2</strong></div>
+      <div class="story-text4"><strong>3HoursAgo</strong></div>
+    
+        <div class="story3">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Circle_-_black_simple.svg/500px-Circle_-_black_simple.svg.png" width="60" height="60" alt="">
+        </div>
+
+        <div class="story-text5"><strong>user3</strong></div>
+        <div class="story-text6"><strong>4HoursAgo</strong></div>
+      
+          <div class="story4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Circle_-_black_simple.svg/500px-Circle_-_black_simple.svg.png" width="60" height="60" alt="">
+          </div>
+
+          <div class="story-text7"><strong>user4</strong></div>
+          <div class="story-text8"><strong>5HoursAgo</strong></div>
+        
+            <div class="story5">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Circle_-_black_simple.svg/500px-Circle_-_black_simple.svg.png" width="60" height="60" alt="">
+            </div>
+
+            <div class="story-text9"><strong>user5</strong></div>
+            <div class="story-text10"><strong>6HoursAgo</strong></div>
+
+<p class="references-ref">About us • Support • Press • API • Jobs • Privacy • Terms • Directory • Profiles • Hashtags • Language</p>
+ 
+
+
+</html>
+
+Website URL - https://wustlcse204.github.io/05-instagram-clone-MustafaAhmed03/
+
