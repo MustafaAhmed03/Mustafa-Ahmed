@@ -1,1 +1,139 @@
+/*styling applied for all texts and boxes in the app*/
 
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Fira sans", sans-serif;
+}
+
+/*main styling for body, header, and task-input bar as well as add-task button*/
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #FFF;
+    background-color: #a1afc7;
+}
+
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header h1{ 
+	font-size: 2.5rem;
+	font-weight: 300;
+	color: #6B7280;
+	margin-bottom: 1rem;
+}
+
+.add-task-input {
+	flex: 1 1 0%;
+	background-color: #122349;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: #EEE;
+	font-size: 1.25rem;
+    width: 83%;
+}
+
+.add-task-btn {
+	color: #EC4899;
+	font-size: 1.25rem;
+	font-weight: 700;
+    background-color: #122349;
+	cursor: pointer;
+}
+
+/*main content section + title*/
+
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.task-list {
+    margin-top: 2rem;
+}
+
+.task-list h2 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: #6B7280;
+    margin-top: 1rem;
+}
+
+/*styling for toDos submitted*/
+
+.to-do-list-container {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    width: 77%;
+    padding-left: 21.1rem;
+    text-align: left;
+    position: absolute;
+}
+
+ul li {
+    /*inspiration online*/
+    cursor: pointer;
+    user-select: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #EEE;
+    background-color: #122349;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    margin-bottom: 1rem;
+    width: 100%;
+    position: relative;
+    border-radius: 1rem;
+}
+
+/* effects for checked items  */
+
+ul li.checked {
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+
+/*delete button*/
+
+.delete-btn {
+    position: absolute;
+    color: crimson;
+    font-weight: bold;
+    /*position calculation inspiration from online*/
+    left: calc(100% - 70px);
+    line-height: 1;
+}
+
+.delete-btn:before {
+    content: "DELETE";
+    font-size: 15px;
+    position: relative;
+}
+
+@media screen and (min-width:820px) and (max-width:1180px) {
+    /*supports dimensions for the iPad Air*/
+    /*when you inspect and go into mobile view, refresh the page and it will show the correct mobile view*/
+    .add-item-input {
+        width: 100%;
+    }
+    ul {
+        width: 135%;
+    }
+    ul li {
+        right: 310px;
+    }
+}
