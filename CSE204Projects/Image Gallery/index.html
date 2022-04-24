@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE 204 - Assignment 07 Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="addEffects()">
+
+    <div class="image-gallery">
+        <h1 class="title">Welcome to my Image Gallery!</h1>
+        <div class="pictures">
+            <img src="https://cdn.pixabay.com/photo/2022/03/23/09/46/animal-7086814__480.jpg" alt="" class="image" id="0">
+        </div>
+
+        <div class="pictures">
+            <img src="https://cdn.pixabay.com/photo/2021/02/24/20/53/abstract-6047465__480.jpg" alt="" class="image" id="1">
+        </div>
+
+        <div class="pictures">
+            <img src="https://cdn.pixabay.com/photo/2021/09/03/15/37/mountain-6596074__480.jpg" alt="" class="image" id="2">
+        </div>
+
+        <div class="pictures">
+            <img src="https://cdn.pixabay.com/photo/2021/12/01/10/31/christmas-balls-6837253__480.jpg" alt="" class="image" id="3">
+        </div>
+
+        <div class="pictures">
+            <img src="https://cdn.pixabay.com/photo/2022/01/13/18/05/road-6935773__480.jpg" alt="" class="image" id="4">
+        </div>
+
+        <div class="pictures">
+            <img src="https://cdn.pixabay.com/photo/2022/03/21/14/07/landscape-7083277__480.jpg" alt="" class="image" id="5">
+        </div>
+
+        <div class="pictures">
+            <img src="https://cdn.pixabay.com/photo/2021/12/05/10/28/nature-6847175__480.jpg" alt="" class="image" id="6">
+        </div>
+
+        <div class="pictures">
+            <img src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__480.jpg" alt="" class="image" id="7">
+        </div>
+
+        <div class="pictures">
+            <img src="https://cdn.pixabay.com/photo/2022/03/23/06/37/bird-7086506__480.jpg" alt="" class="image" id="8">
+        </div>
+
+        <div class="pictures">
+            <img src="https://cdn.pixabay.com/photo/2022/02/28/04/50/nature-7038455__480.jpg" alt="" class="image" id="9">
+        </div>
+
+        <div class="pictures">
+            <img src="https://cdn.pixabay.com/photo/2022/03/20/09/59/bridge-7080365__480.jpg" alt="" class="image" id="10">
+        </div>
+
+        <div class="pictures">
+            <img src="https://cdn.pixabay.com/photo/2022/01/26/20/43/baboon-6969935__480.jpg" alt="" class="image" id="11">
+        </div>
+</div>
+
+
+<!-- large version of images are displayed when button is clicked  -->
+<div class="image-display">
+
+    <div class="image-content">
+
+        <span onclick="collapseImage()" class="closebtn">&times;</span>
+
+        <img id="enlarged-image">
+
+        <a class="previous-btn" onclick="previousImage()"> &#10094; </a>
+        <a class="next-btn" onclick="nextImage()">&#10095;</a>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.3.js">
+</script>
+
+</body>
+</html>
