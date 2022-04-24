@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE 204 - Assignment 08 ToDo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body onload="getAllEventsFromServer()">
+
+
+        <header>
+            <h1>ToDo App</h1>
+            <div id="main-section" class="main-section">
+                <form onsubmit="addEvent(event)">
+
+                    <input 
+                        type="text" 
+                        class="add-task-input" 
+                        id="add-task-input" 
+                        placeholder="What you need toDo?">
+                    <button 
+                        type="add-task" 
+                        class="add-task-btn" 
+                        id="add-task-btn">
+                        Add Task
+                    </button>
+
+                    <main>
+                        <section class="task-list">
+                            <h2>ToDos</h2>
+                        </section>
+                    </main>
+
+                </form>
+            </div>
+        </header>
+        
+                <!--using a list task proved useful and effective here to create the list of toDos and 
+                    modify the styling of each one and provide functionality-->
+    
+                <div class="to-do-list-container" id="to-do-list-container">
+                    <ul class="to-do-list" id="to-do-list">
+                      
+                    </ul>
+        
+                </div>
+
+        </div>
+
+         <script src="script.js"></script>
+
+    </body>
+
+    </html>
+
+
+
+
