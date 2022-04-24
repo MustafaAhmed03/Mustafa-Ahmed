@@ -1,0 +1,93 @@
+body {
+    text-align: center;
+    background: black;
+    background-image: url(https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+}
+
+/*images and image-container styling*/
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-gallery.blur {
+    filter: blur(5px);
+}
+
+.image-display {
+    position: fixed;
+    top: 10rem;
+    visibility: hidden;
+    width: 100%;
+    transform: scale(0);
+    transition: transform 300ms;
+    display: flex;
+    justify-content: center;
+}
+
+.image-display.open {
+    /* opacity: 1; */
+    visibility: visible;
+    transform: scale(1);
+
+}
+
+#enlarged-image {
+    width: 660px;
+    height: 480px;
+}
+
+
+/*buttons*/
+
+
+.closebtn {
+    /*some styling taken from online*/
+    color: #fff;
+    border: 1px solid #AEAEAE;
+    padding: 11px 3px;
+    position: relative;
+    top: -28.5rem;
+    left: 45rem;
+    border-radius: 30px;
+    background: #232324;
+    font-size: 31px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 0px;
+}
+
+.previous-btn, .next-btn {
+    /*some styling taken from online*/
+    position: relative;
+    padding: 30px 8px;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    font-size: 31px;
+    line-height: 0px;
+}
+
+.previous-btn:hover, .next-btn:hover {
+    background-color: #232324;
+}
+
+.previous-btn {
+    left: -45rem;
+    top: -14.5rem;
+}
+
+.next-btn {
+    left: -1rem;
+    top: -14.5rem;
+}
+.title {
+    color: rgb(243, 206, 158);
+}
+.image {
+    width: 660px;
+}
