@@ -12,7 +12,7 @@
     <!--div id for start page is 0 -->
     <div id="0">
       <div>
-        <h1 class="down" style="font-size:10vh;">Hello User!</h1>
+        <h1 class="down" style="font-size: 10vh">Hello User!</h1>
 
         <p class="slide">Your Statement Wrapped is ready.</p>
       </div>
@@ -27,71 +27,61 @@
       <!-- Total Balance-->
       <p class="slam">Your total balance is ...</p>
       <p class="delayed-slam">
-        <strong style="font-size:20vh;">$<span id="totalBal"></span></strong>
+        <strong style="font-size: 20vh">$<span id="totalBal"></span></strong>
         <!-- populate the span with specific user's balance -->
       </p>
-      <div class="bg2">
-        
-      </div>
+      <div class="bg2"></div>
     </div>
     <div id="2" class="hidden">
       <!-- Total Withdrawn class="flex-test" -->
-      <p class="down">QUIZ! How much money do you think you spent this month?</p>
+      <p class="down">
+        QUIZ! How much money do you think you spent this month?
+      </p>
       <div class="answer-container">
         <button id="spendWrong1">$1245</button>
-        <button id="spendCorrect">
-          $<span id="spendSum"></span>
-        </button>
+        <button id="spendCorrect">$<span id="spendSum"></span></button>
         <button id="spendWrong2">$1867</button>
       </div>
-      <br>
-      <div class="emoji-container">
-        🤔
-      </div>
+      <br />
+      <div class="emoji-container">🤔</div>
       <!-- FIX THIS -->
       <!-- <span id="spendResult"></span> -->
     </div>
 
     <div id="3" class="hidden">
       <!-- Withdrawn answer -->
-      <span id="spendResult"> Go back and make a choice to see if you guessed right or wrong! </span>
-      <div class="bg2">
-        
-      </div>
+      <span id="spendResult">
+        Go back and make a choice to see if you guessed right or wrong!
+      </span>
+      <div class="bg2"></div>
     </div>
 
     <div id="4" class="hidden">
       <!-- Total Deposited-->
 
       <p class="down">
-        QUIZ: You withdrew $1505 this month, but how much do
-        you think you deposited to make up for it?
+        QUIZ: You withdrew $1505 this month, but how much do you think you
+        deposited to make up for it?
       </p>
       <div class="answer-container">
         <button id="depositWrong1">$640</button>
         <button id="depositWrong2">$405</button>
-        <button id="depositCorrect">
-          $<span id="depositNum"></span>
-        </button>
+        <button id="depositCorrect">$<span id="depositNum"></span></button>
       </div>
-      <div class="emoji-container">
-        📈
-      </div>
+      <div class="emoji-container">📈</div>
     </div>
 
     <div id="5" class="hidden">
       <!-- Deposited answer -->
-      <span id="depositResult"> Go back and make a choice to see if you guessed right or wrong! </span>
-      <div class="bg2">
-        
-      </div>
+      <span id="depositResult">
+        Go back and make a choice to see if you guessed right or wrong!
+      </span>
+      <div class="bg2"></div>
     </div>
 
     <div id="6" class="hidden">
       <p class="slam">Let’s learn more about your top 5 spending categories!</p>
-      <div class="delayed-slam" style="font-size:20vh">
-        🧠
-      </div>
+      <div class="delayed-slam" style="font-size: 20vh">🧠</div>
     </div>
 
     <div id="7" class="hidden">
@@ -99,142 +89,127 @@
       <h1 class="slide">Your #1 spending category was shopping.</h1>
       <p class="slide">How much money did you spend on Amazon?</p>
       <div class="answer-container">
-        <button id="amazonCorrect">
-          $<span id="amazonSum"> </span>
-        </button>
+        <button id="amazonCorrect">$<span id="amazonSum"> </span></button>
         <button id="amazonWrong1">$64</button>
         <button id="amazonWrong2">$120</button>
       </div>
-      <div class="emoji-container">
-        🛒
-      </div>
+      <div class="emoji-container">🛒</div>
     </div>
 
     <div id="8" class="hidden">
       <!-- Shopping answer -->
-      <span id="amazonResult"> Go back and make a choice to see if you guessed right or wrong! </span>
-      <div class="bg2">
-      
-      </div>
+      <span id="amazonResult">
+        Go back and make a choice to see if you guessed right or wrong!
+      </span>
+      <div class="bg2"></div>
     </div>
 
     <div id="9" class="hidden">
       <!-- food and drink -->
       <h1>Your #2 spending category was food and drink.</h1>
-      <p class="down">You made 9 transactions at Chick-fil-a! You love good eats! </p>
-      <div class="emoji-container" style="top:0;">
-        🍗
-      </div>
-      <h4 class="delayed-slam">In total, you spent $<span id="food"></span> on food and drinks this month.</h4>
+      <p class="down">
+        You made 9 transactions at Chick-fil-a! You love good eats!
+      </p>
+      <div class="emoji-container" style="top: 0">🍗</div>
+      <h4 class="delayed-slam">
+        In total, you spent $<span id="food"></span> on food and drinks this
+        month.
+      </h4>
     </div>
 
     <div id="10" class="hidden">
       <!-- personal -->
-      <h1>
-        Your #3 spending category was personal payments.
-      </h1>
+      <h1>Your #3 spending category was personal payments.</h1>
       <p class="slide">What was your largest Venmo payment of the month?</p>
       <div class="answer-container">
         <button id="personalWrong1">$500</button>
         <button id="personalWrong2">$124</button>
-        <button id="personalCorrect">
-          $<span id="personal"></span>
-        </button>
+        <button id="personalCorrect">$<span id="personal"></span></button>
       </div>
-      <div class="emoji-container">
-        🤝
-      </div>
+      <div class="emoji-container">🤝</div>
     </div>
-    
+
     <div id="11" class="hidden">
       <!-- Shopping answer -->
-      <span id="personalResult"> Go back and make a choice to see if you guessed right or wrong! </span>
-      <div class="bg2">
-        
-      </div>
+      <span id="personalResult">
+        Go back and make a choice to see if you guessed right or wrong!
+      </span>
+      <div class="bg2"></div>
     </div>
 
     <div id="12" class="hidden">
       <!-- transportation -->
-      <h1>
-        Your #4 category was travel/transportation.
-      </h1>
-      <p class="down">You traveled a lot, you spent $<span id="transport"></span> on Uber rides this month!
+      <h1>Your #4 category was travel/transportation.</h1>
+      <p class="down">
+        You traveled a lot, you spent $<span id="transport"></span> on Uber
+        rides this month!
       </p>
-      <div class="car">
-        🚗
-      </div>
+      <div class="car">🚗</div>
     </div>
 
     <div id="13" class="hidden">
       <!-- entertainment/fun -->
-      <h1>
-        Your #5 spending category was entertainment.
-      </h1>
+      <h1>Your #5 spending category was entertainment.</h1>
       <p class="drop">How much did you spend on concert tickets this month?</p>
       <div class="answer-container">
         <button id="funWrong1">$140</button>
         <button id="funWrong2">$230</button>
-        <button id="funCorrect">
-          $<span id="funNum"> </span>
-        </button>
+        <button id="funCorrect">$<span id="funNum"> </span></button>
       </div>
-      <div class="emoji-container">
-        🎤
-      </div>
+      <div class="emoji-container">🎤</div>
     </div>
-    
+
     <div id="14" class="hidden">
       <!-- Shopping answer -->
-      <span id="funResult"> Go back and make a choice to see if you guessed right or wrong! </span>
-      <div class="bg2">
-        
-      </div>
+      <span id="funResult">
+        Go back and make a choice to see if you guessed right or wrong!
+      </span>
+      <div class="bg2"></div>
     </div>
 
     <div id="15" class="hidden">
-        <!-- spending summary -->
+      <!-- spending summary -->
       <p>Here is your spending in other areas:</p>
       <table id="main-table">
-          <tr>
-            <th>Category</th>
-            <th>Amount Spent</th>
-          </tr>
-          <tr>
-            <td>Shopping</td>
-            <td>$170</td>
-          </tr>
-          <tr>
-            <td>Food</td>
-            <td>$150</td>
-          </tr>
-          <tr>
-            <td>Personal</td>
-            <td>$60</td>
-          </tr>
-          <tr>
-            <td>Transportation</td>
-            <td>$75</td>
-          </tr>
-          <tr>
-            <td>Entertainment</td>
-            <td>$50</td>
-          </tr>
-          <tr>
-            <td>Travel</td>
-            <td>$400</td>
-          </tr>
-          <tr>
-            <td>Utilities</td>
-            <td>$200</td>
-          </tr>
-          <tr>
-            <td>Groceries</td>
-            <td>$150</td>
-          </tr>
+        <tr>
+          <th>Category</th>
+          <th>Amount Spent</th>
+        </tr>
+        <tr>
+          <td>Shopping</td>
+          <td>$170</td>
+        </tr>
+        <tr>
+          <td>Food</td>
+          <td>$150</td>
+        </tr>
+        <tr>
+          <td>Personal</td>
+          <td>$60</td>
+        </tr>
+        <tr>
+          <td>Transportation</td>
+          <td>$75</td>
+        </tr>
+        <tr>
+          <td>Entertainment</td>
+          <td>$50</td>
+        </tr>
+        <tr>
+          <td>Travel</td>
+          <td>$400</td>
+        </tr>
+        <tr>
+          <td>Utilities</td>
+          <td>$200</td>
+        </tr>
+        <tr>
+          <td>Groceries</td>
+          <td>$150</td>
+        </tr>
       </table>
-          <br>
-          <br>
+      <br />
+      <br />
       <section>
         <b>Total: $1505</b>
       </section>
@@ -248,42 +223,35 @@
     <div id="16" class="hidden">
       <!-- That's a wrap! -->
       <section class="rainbow"></section>
-      <p>
-        That's a wrap!
-      </p>
-      <button id="myBtn">
-        Full Statement
-      </button>
-      <button onclick="window.location.reload()" id="restart">
-        Restart
-      </button>
+      <p>That's a wrap!</p>
+      <button id="myBtn">Full Statement</button>
+      <button onclick="window.location.reload()" id="restart">Restart</button>
     </div>
-    
+
     <!-- The Modal -->
     <div id="myModal" class="modal">
-
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        <iframe src="https://cdn.glitch.global/68c0e7f8-0a3f-40b9-ba7c-499c9aabeb2b/9efd92bd96776c9bec9470b24e75607a.png?v=1653008326057" width="100%" height="375px"></iframe>
+        <iframe
+          src="https://cdn.glitch.global/68c0e7f8-0a3f-40b9-ba7c-499c9aabeb2b/9efd92bd96776c9bec9470b24e75607a.png?v=1653008326057"
+          width="100%"
+          height="375px"
+        ></iframe>
       </div>
-
     </div>
 
     <script src="script.js"></script>
   </body>
-  
-    <div id="button-container">
-        <button class="nav-button" onclick="leftFunction()" id="left">
-          &lt
-        </button>
-        <button class="nav-button" onclick="rightFunction()" id="right">&gt</button>
-    </div>
+
+  <div id="button-container">
+    <button class="nav-button" onclick="leftFunction()" id="left">&lt</button>
+    <button class="nav-button" onclick="rightFunction()" id="right">&gt</button>
+  </div>
   <div class="hidden">
     <audio controls autoplay>
-          <!-- Music here -->
-<!--       <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mp3"> -->
+      <!-- Music here -->
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mp3">
     </audio>
   </div>
 </html>
-
