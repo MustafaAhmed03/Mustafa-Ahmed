@@ -1,0 +1,51 @@
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.add-task-input {
+	margin-top: 10px;
+	flex: 1 1 0%;
+	background-color: #122349;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: #EEE;
+	font-size: 1.25rem;
+    width: 83%;
+}
+
+.add-task-btn {
+	color: #EC4899;
+	font-size: 1.25rem;
+	font-weight: 700;
+    background-color: #122349;
+	cursor: pointer;
+}
+
+.sorter {
+	margin-top: 25px;
+	margin-bottom: 10px;
+	color: #6B7280;
+	font-weight: 300;
+}
+
+.drop-down {
+    position: relative;
+}
+#sort {
+	flex: 1 1 0%;
+	background-color: #122349;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: #EEE;
+	font-size: 1.25rem;
+    width: 83%;
+}
+
+select#sort {
+    border-radius: 3px;
+}

@@ -1,0 +1,14 @@
+.delete-btn {
+    position: absolute;
+    color: crimson;
+    font-weight: bold;
+    /*position calculation inspiration from online*/
+    left: calc(100% - 70px);
+    line-height: 1;
+}
+
+.delete-btn:before {
+    content: "DELETE";
+    font-size: 15px;
+    position: relative;
+}

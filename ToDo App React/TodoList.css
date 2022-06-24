@@ -1,0 +1,35 @@
+.to-do-list-container {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    width: 77%;
+    padding-left: 21.1rem;
+    text-align: left;
+    position: absolute;
+}
+
+ul li {
+    /*inspiration online*/
+    cursor: pointer;
+    user-select: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #EEE;
+    background-color: #122349;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    margin-bottom: 1rem;
+    width: 100%;
+    position: relative;
+    border-radius: 1rem;
+}
+
+/* effects for checked items  */
+
+ul li.checked {
+    text-decoration: line-through;
+    opacity: 0.4;
+}
