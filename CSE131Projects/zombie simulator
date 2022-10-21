@@ -68,7 +68,7 @@ public class ZombieSimulator {
 		}
 		
 		StdDraw.setPenColor(TEXT_COLOR);
-		StdDraw.text(X, ENTITY_RADIUS, ZOMBIE_TOKEN_VALUE);
+		StdDraw.text(0.1, 0.9, (nonZombieCount(areZombies) + "/" + areZombies.length));
 	
 		StdDraw.show();
 	}
