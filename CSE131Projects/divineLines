@@ -1,0 +1,62 @@
+package divinelines;
+
+import edu.princeton.cs.introcs.StdDraw;
+
+public class Lines {
+
+/**
+*
+* @param x1 x coordinate of starting point
+* @param y1 y coordinate of starting point
+* @param x2 x coordinate of ending point
+* @param y2 y coordinate of ending point
+*/
+public static void drawLine(double x1, double y1, double x2, double y2) {
+
+double midX = (x1 + x2) / 2.0;
+double midY = (y1 + y2) / 2.0;
+if (Math.abs(x2 - x1) < 0.0025 && Math.abs(y2 - y1) < 0.0025) {
+return;
+} else {
+StdDraw.point(x2, y2);
+}
+
+
+
+drawLine(x1, y1, midX, midY);
+drawLine(midX, midY, x2, y2);
+
+
+
+}
+
+/**
+* Code to test the drawLine method visually
+*/
+public static void main(String[] args) {
+// uncomment the line below when you are ready to speed up the drawing
+StdDraw.enableDoubleBuffering();
+
+StdDraw.setPenRadius(0.002);
+//
+// Test the drawing program
+//
+drawLine(0, 0, 1, 1); // lower left to upper right
+drawLine(0, 1, 1, 0); // upper left to lower right
+
+//
+// Draw rectangles of decreasing width and height
+//
+for (double r = 0.25; r < 0.5; r = r + .005) {
+double s = 1 - r;
+drawLine(r, r, r, s);
+drawLine(r, s, s, s);
+drawLine(s, s, s, r);
+drawLine(s, r, r, r);
+}
+StdDraw.show();
+System.out.println("done drawing");
+}
+
+
+}
