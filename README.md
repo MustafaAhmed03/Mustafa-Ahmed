@@ -4,6 +4,6 @@ This love for learning smoothly transitioned into a love for programming. I reme
 
 Currently an aspiring software engineer looking for professional experiences; hoping to translate curiosity into algorithms, programs, and projects that help me further understand our world. I am also interested in quantitative trading and the intersections it has with software engineering.
 
-Technologies: Java, HTML, CSS, Javascript, React, C++, PHP, SQL, Python, Node.js
+Technologies: Java, HTML, CSS, Javascript, React.js, C++, PHP, SQL, Python, Node.js
 
 https://www.linkedin.com/in/mustafa-ahmed-b40a42217/
